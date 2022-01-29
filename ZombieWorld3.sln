@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZombieWorldUnity", "ZombieWorld3\ZombieWorldUnity.csproj", "{A4145B10-6A1B-4554-B42D-54ABD9A1146D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4145B10-6A1B-4554-B42D-54ABD9A1146D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4145B10-6A1B-4554-B42D-54ABD9A1146D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4145B10-6A1B-4554-B42D-54ABD9A1146D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4145B10-6A1B-4554-B42D-54ABD9A1146D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE86D105-5E1F-4462-A7BD-3CD1C7E9174C}
+	EndGlobalSection
+EndGlobal
