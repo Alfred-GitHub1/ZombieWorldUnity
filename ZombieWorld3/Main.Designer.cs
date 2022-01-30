@@ -26,6 +26,9 @@ namespace ZombieWorld3 {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.selectHandleScreen1 = new ZombieWorld3.selectHandleScreen();
+            this.killsScreen1 = new ZombieWorld3.killsScreen();
+            this.challengesScreen1 = new ZombieWorld3.challengesScreen();
             this.homeScreen1 = new ZombieWorld3.HomeScreen();
             this.killsScore1 = new ZombieWorld3.paragonScreen();
             this.panel1.SuspendLayout();
@@ -46,6 +49,7 @@ namespace ZombieWorld3 {
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(168, 500);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button8
             // 
@@ -60,6 +64,7 @@ namespace ZombieWorld3 {
             this.button8.TabIndex = 3;
             this.button8.Text = "Challenges";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button6
             // 
@@ -116,7 +121,6 @@ namespace ZombieWorld3 {
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(834, 50);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.move_window);
             // 
             // button7
@@ -184,7 +188,6 @@ namespace ZombieWorld3 {
             this.button4.TabIndex = 2;
             this.button4.Text = "Handle:";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Visible = false;
             // 
             // comboBox1
             // 
@@ -194,12 +197,12 @@ namespace ZombieWorld3 {
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(98, 11);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 28);
+            this.comboBox1.Size = new System.Drawing.Size(187, 28);
             this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Tag = "";
             this.comboBox1.Text = "Select Handle";
-            this.comboBox1.Visible = false;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.Enter += new System.EventHandler(this.comboBox1_Enter);
             this.comboBox1.Leave += new System.EventHandler(this.comboBox1_Leave);
             // 
@@ -218,17 +221,40 @@ namespace ZombieWorld3 {
             this.button3.TabIndex = 0;
             this.button3.Text = "Sterillium";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.selectHandleScreen1);
+            this.panel4.Controls.Add(this.killsScreen1);
+            this.panel4.Controls.Add(this.challengesScreen1);
             this.panel4.Controls.Add(this.homeScreen1);
             this.panel4.Controls.Add(this.killsScore1);
             this.panel4.Location = new System.Drawing.Point(167, 50);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(832, 500);
             this.panel4.TabIndex = 4;
+            // 
+            // selectHandleScreen1
+            // 
+            this.selectHandleScreen1.Location = new System.Drawing.Point(1, 0);
+            this.selectHandleScreen1.Name = "selectHandleScreen1";
+            this.selectHandleScreen1.Size = new System.Drawing.Size(663, 498);
+            this.selectHandleScreen1.TabIndex = 6;
+            // 
+            // killsScreen1
+            // 
+            this.killsScreen1.Location = new System.Drawing.Point(0, 0);
+            this.killsScreen1.Name = "killsScreen1";
+            this.killsScreen1.Size = new System.Drawing.Size(666, 500);
+            this.killsScreen1.TabIndex = 5;
+            // 
+            // challengesScreen1
+            // 
+            this.challengesScreen1.Location = new System.Drawing.Point(0, 0);
+            this.challengesScreen1.Name = "challengesScreen1";
+            this.challengesScreen1.Size = new System.Drawing.Size(666, 500);
+            this.challengesScreen1.TabIndex = 4;
             // 
             // homeScreen1
             // 
@@ -248,7 +274,7 @@ namespace ZombieWorld3 {
             this.killsScore1.Size = new System.Drawing.Size(830, 498);
             this.killsScore1.TabIndex = 0;
             // 
-            // ZombieWorldUnity
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -259,7 +285,7 @@ namespace ZombieWorld3 {
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ZombieWorldUnity";
+            this.Name = "Main";
             this.Text = "Zombie World : Unity";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -284,6 +310,9 @@ namespace ZombieWorld3 {
         private HomeScreen homeScreen1;
         private Button button7;
         private Button button8;
+        private killsScreen killsScreen1;
+        private challengesScreen challengesScreen1;
+        private selectHandleScreen selectHandleScreen1;
     }
 }
 

@@ -66,6 +66,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label9
@@ -243,7 +245,7 @@
             // 
             // rTB
             // 
-            this.rTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTB.Location = new System.Drawing.Point(286, 11);
             this.rTB.Name = "rTB";
             this.rTB.ReadOnly = true;
@@ -309,7 +311,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(4, 371);
+            this.label13.Location = new System.Drawing.Point(12, 371);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(118, 15);
             this.label13.TabIndex = 107;
@@ -335,7 +337,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(47, 350);
+            this.label14.Location = new System.Drawing.Point(52, 350);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(78, 15);
             this.label14.TabIndex = 104;
@@ -391,9 +393,9 @@
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(49, 287);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(73, 15);
+            this.label17.Size = new System.Drawing.Size(62, 15);
             this.label17.TabIndex = 98;
-            this.label17.Text = "Ability Rates";
+            this.label17.Text = "Cooldown";
             // 
             // textBox19
             // 
@@ -435,7 +437,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(52, 416);
+            this.label12.Location = new System.Drawing.Point(78, 434);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(52, 15);
             this.label12.TabIndex = 113;
@@ -453,17 +455,37 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(47, 392);
+            this.label20.Location = new System.Drawing.Point(80, 413);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(50, 15);
             this.label20.TabIndex = 111;
             this.label20.Text = "Mastery";
             // 
-            // KillsScore
+            // textBox21
+            // 
+            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox21.Location = new System.Drawing.Point(136, 431);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(129, 21);
+            this.textBox21.TabIndex = 115;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(48, 392);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(82, 15);
+            this.label21.TabIndex = 116;
+            this.label21.Text = "Exp Multiplier";
+            // 
+            // paragonScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.textBox21);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox20);
@@ -507,7 +529,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
-            this.Name = "KillsScore";
+            this.Name = "paragonScreen";
             this.Size = new System.Drawing.Size(666, 500);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -558,5 +580,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Label label21;
     }
 }
