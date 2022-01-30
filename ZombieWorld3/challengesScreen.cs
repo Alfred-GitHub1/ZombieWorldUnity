@@ -42,7 +42,6 @@ namespace ZombieWorld3 {
         }
 
         private void button1_Click(object sender,EventArgs e) {
-            button1.Enabled = false;
             rTB.Clear();
             if (Main.playerHandle.StartsWith("1-")) {
                 string[] accountNumbers = Directory.GetDirectories(Main.path,Main.playerHandle,SearchOption.AllDirectories);

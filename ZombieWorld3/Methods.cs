@@ -17,15 +17,6 @@ namespace ZombieWorld3 {
                 _error = e.ToString();
             }
         }
-        public static void lineChangerMinus1(string n,string f,int ed) {
-            try {
-                string[] l = File.ReadAllLines(f);
-                l[ed-1] = n;
-                File.WriteAllLines(f,l);
-            } catch (Exception e) {
-                _error = e.ToString();
-            }
-        }
         public static void InsertLine(string path,string line,int pos) {
             string[] lines = File.ReadAllLines(path);
             using (StreamWriter w = new StreamWriter(path)) {
@@ -38,11 +29,11 @@ namespace ZombieWorld3 {
         }
         public static void RemoveChallenges(string file) {
             try {
-                string[] read = File.ReadAllLines(file);
+                List<string> read = new List<string>(File.ReadAllLines(file));
                 int startDeleteLine = 0;
                 int endDeleteLine = 0;
                 bool found = false;
-                for (int y = 0;y < read.Length;y++) {
+                for (int y = 0;y < read.Count;y++) {
                     string line = read[y];
                     if (read[y].Contains("<Section name=") && read[y].Contains("Challenges")) {
                         startDeleteLine = y + 1;
@@ -53,11 +44,10 @@ namespace ZombieWorld3 {
                         break;
                     }
                 }
-                for (int y = 0;y < read.Length;y++) {
-                    if ((y >= startDeleteLine) && (y <= endDeleteLine)) {
-                        Methods.lineChangerMinus1(string.Empty,file,y);
-                    }
+                for (int y = 0; y < 1 + endDeleteLine - startDeleteLine; y++) {
+                        read.RemoveAt(startDeleteLine - 1);
                 }
+                File.WriteAllLines(file,read);
             } catch (Exception e) {
                 //
             }
