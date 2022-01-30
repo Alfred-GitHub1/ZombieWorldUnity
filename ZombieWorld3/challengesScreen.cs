@@ -11,7 +11,6 @@ namespace ZombieWorld3 {
         }
 
         public string filePath = string.Empty;
-
         public void InsertStuff() {
             Methods.InsertLine(filePath,@"    </Section>",2);
             Methods.InsertLine(filePath,@"        </Key>",2);
