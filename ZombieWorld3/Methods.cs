@@ -49,7 +49,7 @@ namespace ZombieWorld3 {
                 }
                 File.WriteAllLines(file,read);
             } catch (Exception e) {
-                
+                //
             }
         }
     }
