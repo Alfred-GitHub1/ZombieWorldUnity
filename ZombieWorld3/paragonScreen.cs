@@ -223,7 +223,6 @@ namespace ZombieWorld3 {
                     if (line.Contains("Signature value")) {
                         BankSign.Sign("2-S2-1-7593740",Main.playerHandle,"zombieworldu",filePath);
                         Methods.lineChanger("    <Signature value=\"" + BankSign.signString + "\"/>",filePath,y);
-                        //successLabel();
                     }
                 }
             }
