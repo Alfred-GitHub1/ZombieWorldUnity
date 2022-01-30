@@ -23,20 +23,9 @@
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
         private void InitializeComponent() {
-            this.button1 = new System.Windows.Forms.Button();
             this.rTB = new System.Windows.Forms.RichTextBox();
+            this.rjButton1 = new ZombieWorld3.RJControls.RJButton();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(274, 475);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Give me all Challenges";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // rTB
             // 
@@ -48,12 +37,32 @@
             this.rTB.TabIndex = 90;
             this.rTB.Text = "";
             // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 20;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(3, 225);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(283, 40);
+            this.rjButton1.TabIndex = 93;
+            this.rjButton1.Text = "Give me all Challenges";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
             // challengesScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.rTB);
-            this.Controls.Add(this.button1);
             this.Name = "challengesScreen";
             this.Size = new System.Drawing.Size(666, 500);
             this.ResumeLayout(false);
@@ -61,8 +70,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RichTextBox rTB;
+        private RJControls.RJButton rjButton1;
     }
 }

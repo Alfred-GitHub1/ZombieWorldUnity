@@ -9,7 +9,6 @@ namespace ZombieWorld3 {
         public paragonScreen() {
             InitializeComponent();
             l1.Hide();
-            button2.Enabled = true;
             textBox1.Text = "100";
             textBox2.Text = "2500";
             textBox3.Text = "1000";
@@ -234,7 +233,7 @@ namespace ZombieWorld3 {
             return (999 - (16 + value));
         }
 
-        private void button2_Click(object sender,EventArgs e) {
+        private void rjButton1_Click(object sender,EventArgs e) {
             rTB.Clear();
             getAndCalcValues();
             rTB.AppendText("Writing Values to Bankfile..." + Environment.NewLine);

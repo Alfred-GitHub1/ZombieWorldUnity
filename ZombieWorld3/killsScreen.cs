@@ -19,7 +19,7 @@ namespace ZombieWorld3 {
 
         public string filePath = string.Empty;
 
-        private void button1_Click(object sender,System.EventArgs e) {
+        private void rjButton1_Click(object sender,EventArgs e) {
             rTB.Clear();
             if (Main.playerHandle.StartsWith("1-")) {
                 string[] accountNumbers = Directory.GetDirectories(Main.path,Main.playerHandle,SearchOption.AllDirectories);
@@ -103,5 +103,6 @@ namespace ZombieWorld3 {
                 rTB.AppendText("Ready to Play!" + Environment.NewLine);
             }
         }
+
     }
 }

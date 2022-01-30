@@ -41,7 +41,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.rTB = new System.Windows.Forms.RichTextBox();
             this.l1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -68,6 +67,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.rjButton1 = new ZombieWorld3.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // label9
@@ -231,17 +231,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(129, 21);
             this.textBox2.TabIndex = 49;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(15, 463);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(630, 34);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "Generate";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // rTB
             // 
@@ -479,11 +468,32 @@
             this.label21.TabIndex = 116;
             this.label21.Text = "Exp Multiplier";
             // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 20;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(22, 457);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(623, 40);
+            this.rjButton1.TabIndex = 117;
+            this.rjButton1.Text = "Write to Bankfile";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
             // paragonScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.textBox21);
             this.Controls.Add(this.textBox13);
@@ -528,7 +538,6 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button2);
             this.Name = "paragonScreen";
             this.Size = new System.Drawing.Size(666, 500);
             this.ResumeLayout(false);
@@ -555,7 +564,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox rTB;
         private System.Windows.Forms.Label l1;
         private System.Windows.Forms.TextBox textBox1;
@@ -582,5 +590,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label21;
+        private RJControls.RJButton rjButton1;
     }
 }

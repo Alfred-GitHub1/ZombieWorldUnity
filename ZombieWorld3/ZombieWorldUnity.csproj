@@ -81,6 +81,9 @@
       <DependentUpon>challengesScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="BankSign.cs" />
+    <Compile Include="CustomButtons.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="killsScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
