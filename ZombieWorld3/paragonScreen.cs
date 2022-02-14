@@ -8,7 +8,6 @@ namespace ZombieWorld3 {
 
         public paragonScreen() {
             InitializeComponent();
-
             l1.Hide();
             textBox1.Text = "100";
             textBox2.Text = "2500";
@@ -92,73 +91,35 @@ namespace ZombieWorld3 {
             }
         }
 
+        public void SubRoutine(string name,int fieldname,string line,int y) {
+            if (line.Contains(name) && line.Contains("Key name")) {
+                Methods.lineChanger("                  <Value int=\"" + fieldname.ToString() + "\"/>",filePath,y + 1);
+            }
+        }
+
         public void Routine(string line,int y) {
-            if (line.Contains("PlayerID") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + pointsYouWant.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("InfoNumber") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_talentPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("DamagePoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_damagePoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("MoveSpeedPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_movespeedPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("LifePoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_lifePoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("ShieldPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_shieldPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("ShieldRegenerationPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_shieldRegenerationPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("MineralStartPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_mineralStart.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("RespawnSpeedPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_respawnSpeedPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("LifeRegenPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_lifeRegenPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("LifeArmorBonusPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_lifeArmorBonusPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("LifeArmorMultiplyPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_lifeArmorMultiplyPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("VespeneStartPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_vespeneStartPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("EnergyPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_energyPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("EnergyRegenPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_energyRegenPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("YOUR KILLS WILL BE RESET IF YOU ATTEMPT TO HACK ANYTHING") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_shieldArmorMultiplyPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("DamageReductionPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_damageReductionPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("ShieldArmorBonusPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_shieldArmorBonusPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("CooldownPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_cooldownPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("ExpPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_expPoints.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("MasteryPoints") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_mastery.ToString() + "\"/>",filePath,y + 1);
-            }
-            if (line.Contains("Plays") && line.Contains("Key name")) {
-                Methods.lineChanger("                  <Value int=\"" + lv_prestige.ToString() + "\"/>",filePath,y + 1);
-            }
+            SubRoutine("PlayerID",pointsYouWant,line,y);
+            SubRoutine("InfoNumber",lv_talentPoints,line,y);
+            SubRoutine("DamagePoints",lv_damagePoints,line,y);
+            SubRoutine("MoveSpeedPoints",lv_movespeedPoints,line,y);
+            SubRoutine("LifePoints",lv_lifePoints,line,y);
+            SubRoutine("ShieldPoints",lv_shieldPoints,line,y);
+            SubRoutine("ShieldRegenerationPoints",lv_shieldRegenerationPoints,line,y);
+            SubRoutine("MineralStartPoints",lv_mineralStart,line,y);
+            SubRoutine("RespawnSpeedPoints",lv_respawnSpeedPoints,line,y);
+            SubRoutine("LifeRegenPoints",lv_lifeRegenPoints,line,y);
+            SubRoutine("LifeArmorBonusPoints",lv_lifeArmorBonusPoints,line,y);
+            SubRoutine("LifeArmorMultiplyPoints",lv_lifeArmorMultiplyPoints,line,y);
+            SubRoutine("VespeneStartPoints",lv_vespeneStartPoints,line,y);
+            SubRoutine("EnergyPoints",lv_energyPoints,line,y);
+            SubRoutine("EnergyRegenPoints",lv_energyRegenPoints,line,y);
+            SubRoutine("YOUR KILLS WILL BE RESET IF YOU ATTEMPT TO HACK ANYTHING",lv_shieldArmorMultiplyPoints,line,y);
+            SubRoutine("DamageReductionPoints",lv_damageReductionPoints,line,y);
+            SubRoutine("ShieldArmorBonusPoints",lv_shieldArmorBonusPoints,line,y);
+            SubRoutine("CooldownPoints",lv_cooldownPoints,line,y);
+            SubRoutine("ExpPoints",lv_expPoints,line,y);
+            SubRoutine("MasteryPoints",lv_mastery,line,y);
+            SubRoutine("Plays",lv_prestige,line,y);
         }
 
         public int stupidCalc() { return 999 - (16 + value); }

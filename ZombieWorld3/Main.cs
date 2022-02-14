@@ -122,20 +122,12 @@ namespace ZombieWorld3 {
             if (n.StartsWith("3-")) { tb.Text = "Nope"; }
         }
 
-        private void button2_Click(object sender,EventArgs e) {
-            hideAllandShow(killsScore1);
-        }
-
-        private void button6_Click(object sender,EventArgs e) {
-            hideAllandShow(homeScreen1);
-        }
-
         public void hideAllandShow(Control s) {
+            s.Show();
             homeScreen1.Hide();
             killsScore1.Hide();
             killsScreen1.Hide();
             challengesScreen1.Hide();
-            s.Show();
         }
 
         private void button7_Click(object sender,EventArgs e) {
@@ -149,13 +141,20 @@ namespace ZombieWorld3 {
         private void button7_MouseLeave(object sender,EventArgs e) {
             button7.ForeColor = Color.White;
         }
+        private void button2_Click(object sender,EventArgs e) {
+            hideAllandShow(killsScore1);
+        }
+
+        private void button6_Click(object sender,EventArgs e) {
+            hideAllandShow(homeScreen1);
+        }
 
         private void button5_Click(object sender,EventArgs e) {
-            killsScreen1.Show();
+            hideAllandShow(killsScreen1);
         }
 
         private void button8_Click(object sender,EventArgs e) {
-            challengesScreen1.Show();
+            hideAllandShow(challengesScreen1);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender,EventArgs e) {
