@@ -49,7 +49,6 @@ namespace ZombieWorld3 {
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(168, 500);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ChallengeButton
             // 

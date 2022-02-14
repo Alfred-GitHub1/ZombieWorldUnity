@@ -9,7 +9,6 @@ using System.Xml.Linq;
 namespace ZombieWorld3 {
 
     internal static class BankSign {
-
         public static string signString;
 
         [DllImport("BankSign.dll",CharSet = CharSet.Ansi,CallingConvention = CallingConvention.Cdecl)]

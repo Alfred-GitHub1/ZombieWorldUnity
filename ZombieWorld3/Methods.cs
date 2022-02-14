@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZombieWorld3 {
+
     internal class Methods {
         public static string _error = string.Empty;
+
         public static void lineChanger(string n,string f,int ed) {
             try {
                 string[] l = File.ReadAllLines(f);
@@ -17,6 +16,7 @@ namespace ZombieWorld3 {
                 _error = e.ToString();
             }
         }
+
         public static void InsertLine(string path,string line,int pos) {
             string[] lines = File.ReadAllLines(path);
             using (StreamWriter w = new StreamWriter(path)) {
@@ -27,6 +27,7 @@ namespace ZombieWorld3 {
                     w.WriteLine(lines[i]);
             }
         }
+
         public static void RemoveChallenges(string file) {
             try {
                 List<string> read = new List<string>(File.ReadAllLines(file));
@@ -44,8 +45,8 @@ namespace ZombieWorld3 {
                         break;
                     }
                 }
-                for (int y = 0; y < 1 + endDeleteLine - startDeleteLine; y++) {
-                        read.RemoveAt(startDeleteLine - 1);
+                for (int y = 0;y < 1 + endDeleteLine - startDeleteLine;y++) {
+                    read.RemoveAt(startDeleteLine - 1);
                 }
                 File.WriteAllLines(file,read);
             } catch (Exception e) {

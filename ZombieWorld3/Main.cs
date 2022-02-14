@@ -91,9 +91,6 @@ namespace ZombieWorld3 {
             string t = comboBox1.Text;
             if (!string.IsNullOrEmpty(comboBox1.Text) &&
               !string.IsNullOrWhiteSpace(comboBox1.Text) &&
-              comboBox1.Text != "1-S2-1-717232" &&
-              comboBox1.Text != "2-S2-1-4013551" &&
-              comboBox1.Text != "x-S2-x-xxxxxxx" &&
               t.Substring(1,1) == "-" &&
               t.Substring(4,1) == "-" &&
               t.Substring(6,1) == "-" &&
@@ -161,15 +158,25 @@ namespace ZombieWorld3 {
             challengesScreen1.Show();
         }
 
-        private void panel1_Paint(object sender,PaintEventArgs e) {
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender,EventArgs e) {
             ParagonButton.Show();
             KillButton.Show();
             HomeButton.Show();
             ChallengeButton.Show();
             selectHandleScreen1.Hide();
+        }
+
+        public static void WriteStuff(RichTextBox rTB) {
+            rTB.AppendText("Writing Values to Bankfile..." + Environment.NewLine);
+            rTB.AppendText("Writing Done." + Environment.NewLine);
+            rTB.AppendText(" " + Environment.NewLine);
+        }
+
+        public static void WriteStuff2(RichTextBox rTB) {
+            rTB.AppendText("Writing Signature..." + Environment.NewLine);
+            rTB.AppendText("Signature Done." + Environment.NewLine);
+            rTB.AppendText(" " + Environment.NewLine);
+            rTB.AppendText("Ready to Play!" + Environment.NewLine);
         }
     }
 }

@@ -2,12 +2,11 @@
 using System.Windows.Forms;
 
 namespace ZombieWorld3 {
-    static class Program {
-        /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
-        /// </summary>
+
+    internal static class Program {
+
         [STAThread]
-        static void Main() {
+        private static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());

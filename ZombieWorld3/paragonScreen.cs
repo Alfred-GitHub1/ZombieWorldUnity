@@ -69,37 +69,30 @@ namespace ZombieWorld3 {
             }
         }
 
-        private void WriteIntoBankfileWithSignature() {
-            if (Main.playerHandle.StartsWith("1-")) {
-                string[] accountNumbers = Directory.GetDirectories(Main.path,Main.playerHandle,SearchOption.AllDirectories);
-                filePath = accountNumbers[0] + @"\Banks\" + Main.USBankFile;
-                string[] array = File.ReadAllLines(filePath);
-                for (int y = 0;y < array.Length;y++) {
-                    string line = array[y];
-                    Routine(line, y);
-                    SignRoutine("1-S2-1-8298616",line,y);
-                }
-            }
-            if (Main.playerHandle.StartsWith("2-")) {
-                string[] accountNumbers = Directory.GetDirectories(Main.path,Main.playerHandle,SearchOption.AllDirectories);
-                filePath = accountNumbers[0] + @"\Banks\" + Main.EUBankFile;
-                string[] array = File.ReadAllLines(filePath);
-                for (int y = 0;y < array.Length;y++) {
-                    string line = array[y];
-                    Routine(line, y);
-                    SignRoutine("2-S2-1-7593740",line, y);
-                }
+        public void WriteBank(string BankFile,string HandleOwner) {
+            string[] accountNumbers = Directory.GetDirectories(Main.path,Main.playerHandle,SearchOption.AllDirectories);
+            filePath = accountNumbers[0] + @"\Banks\" + BankFile;
+            string[] array = File.ReadAllLines(filePath);
+            for (int y = 0;y < array.Length;y++) {
+                string line = array[y];
+                Routine(line,y);
+                SignRoutine(HandleOwner,line,y);
             }
         }
 
-        public void SignRoutine(string handle, string line, int y) {
+        private void WriteIntoBankfileWithSignature() {
+            if (Main.playerHandle.StartsWith("1-")) { WriteBank(Main.USBankFile,"1-S2-1-8298616"); }
+            if (Main.playerHandle.StartsWith("2-")) { WriteBank(Main.EUBankFile,"2-S2-1-7593740"); }
+        }
+
+        public void SignRoutine(string handle,string line,int y) {
             if (line.Contains("Signature value")) {
                 BankSign.Sign(handle,Main.playerHandle,"zombieworldu",filePath);
                 Methods.lineChanger("    <Signature value=\"" + BankSign.signString + "\"/>",filePath,y);
             }
         }
 
-        public void Routine(string line, int y) {
+        public void Routine(string line,int y) {
             if (line.Contains("PlayerID") && line.Contains("Key name")) {
                 Methods.lineChanger("                  <Value int=\"" + pointsYouWant.ToString() + "\"/>",filePath,y + 1);
             }
@@ -168,21 +161,14 @@ namespace ZombieWorld3 {
             }
         }
 
-        public int stupidCalc() {
-            return (999 - (16 + value));
-        }
+        public int stupidCalc() { return 999 - (16 + value); }
 
         private void rjButton1_Click(object sender,EventArgs e) {
             rTB.Clear();
             getAndCalcValues();
-            rTB.AppendText("Writing Values to Bankfile..." + Environment.NewLine);
-            rTB.AppendText("Writing Done." + Environment.NewLine);
-            rTB.AppendText(" " + Environment.NewLine);
+            Main.WriteStuff(rTB);
             WriteIntoBankfileWithSignature();
-            rTB.AppendText("Writing Signature..." + Environment.NewLine);
-            rTB.AppendText("Signature Done." + Environment.NewLine);
-            rTB.AppendText(" " + Environment.NewLine);
-            rTB.AppendText("Ready to Play!" + Environment.NewLine);
+            Main.WriteStuff2(rTB);
         }
     }
 }
