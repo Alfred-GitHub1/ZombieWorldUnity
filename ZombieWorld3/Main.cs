@@ -46,10 +46,10 @@ namespace ZombieWorld3 {
                 FormBorderStyle = FormBorderStyle.None;
                 Region = Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,10,10));
                 Assign(this);
-                button5.Hide();
-                button2.Hide();
-                button8.Hide();
-                button6.Hide();
+                KillButton.Hide();
+                ParagonButton.Hide();
+                ChallengeButton.Hide();
+                HomeButton.Hide();
                 hideAllandShow(homeScreen1);
                 string[] accountNumbers = Directory.GetDirectories(path,"*",SearchOption.TopDirectoryOnly);
                 if (accountNumbers != null) {
@@ -165,10 +165,10 @@ namespace ZombieWorld3 {
         }
 
         private void comboBox1_SelectedIndexChanged(object sender,EventArgs e) {
-            button2.Show();
-            button5.Show();
-            button6.Show();
-            button8.Show();
+            ParagonButton.Show();
+            KillButton.Show();
+            HomeButton.Show();
+            ChallengeButton.Show();
             selectHandleScreen1.Hide();
         }
     }

@@ -14,10 +14,10 @@ namespace ZombieWorld3 {
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ChallengeButton = new System.Windows.Forms.Button();
+            this.HomeButton = new System.Windows.Forms.Button();
+            this.KillButton = new System.Windows.Forms.Button();
+            this.ParagonButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,10 +40,10 @@ namespace ZombieWorld3 {
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.ChallengeButton);
+            this.panel1.Controls.Add(this.HomeButton);
+            this.panel1.Controls.Add(this.KillButton);
+            this.panel1.Controls.Add(this.ParagonButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
@@ -51,65 +51,65 @@ namespace ZombieWorld3 {
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button8
+            // ChallengeButton
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(150)))), ((int)(((byte)(249)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(11, 101);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(146, 42);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "Challenges";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.ChallengeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(150)))), ((int)(((byte)(249)))));
+            this.ChallengeButton.FlatAppearance.BorderSize = 0;
+            this.ChallengeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChallengeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.ChallengeButton.ForeColor = System.Drawing.Color.White;
+            this.ChallengeButton.Location = new System.Drawing.Point(11, 101);
+            this.ChallengeButton.Name = "ChallengeButton";
+            this.ChallengeButton.Size = new System.Drawing.Size(146, 42);
+            this.ChallengeButton.TabIndex = 3;
+            this.ChallengeButton.Text = "Challenges";
+            this.ChallengeButton.UseVisualStyleBackColor = false;
+            this.ChallengeButton.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button6
+            // HomeButton
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(150)))), ((int)(((byte)(249)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(11, 445);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(146, 42);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Home";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.HomeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(150)))), ((int)(((byte)(249)))));
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.HomeButton.ForeColor = System.Drawing.Color.White;
+            this.HomeButton.Location = new System.Drawing.Point(11, 445);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(146, 42);
+            this.HomeButton.TabIndex = 2;
+            this.HomeButton.Text = "Home";
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // KillButton
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(150)))), ((int)(((byte)(249)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(11, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(146, 42);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Kills";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.KillButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(150)))), ((int)(((byte)(249)))));
+            this.KillButton.FlatAppearance.BorderSize = 0;
+            this.KillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.KillButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.KillButton.ForeColor = System.Drawing.Color.White;
+            this.KillButton.Location = new System.Drawing.Point(11, 5);
+            this.KillButton.Name = "KillButton";
+            this.KillButton.Size = new System.Drawing.Size(146, 42);
+            this.KillButton.TabIndex = 1;
+            this.KillButton.Text = "Kills";
+            this.KillButton.UseVisualStyleBackColor = false;
+            this.KillButton.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button2
+            // ParagonButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(150)))), ((int)(((byte)(249)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(11, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 42);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Paragon Points";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ParagonButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(150)))), ((int)(((byte)(249)))));
+            this.ParagonButton.FlatAppearance.BorderSize = 0;
+            this.ParagonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ParagonButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.ParagonButton.ForeColor = System.Drawing.Color.White;
+            this.ParagonButton.Location = new System.Drawing.Point(11, 53);
+            this.ParagonButton.Name = "ParagonButton";
+            this.ParagonButton.Size = new System.Drawing.Size(146, 42);
+            this.ParagonButton.TabIndex = 0;
+            this.ParagonButton.Text = "Paragon Points";
+            this.ParagonButton.UseVisualStyleBackColor = false;
+            this.ParagonButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
@@ -299,17 +299,17 @@ namespace ZombieWorld3 {
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private Button button1;
-        private Button button2;
+        private Button ParagonButton;
         private Panel panel4;
         private paragonScreen killsScore1;
         private Button button3;
         private Button button4;
         private ComboBox comboBox1;
-        private Button button5;
-        private Button button6;
+        private Button KillButton;
+        private Button HomeButton;
         private HomeScreen homeScreen1;
         private Button button7;
-        private Button button8;
+        private Button ChallengeButton;
         private killsScreen killsScreen1;
         private challengesScreen challengesScreen1;
         private selectHandleScreen selectHandleScreen1;

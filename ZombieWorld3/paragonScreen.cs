@@ -8,6 +8,7 @@ namespace ZombieWorld3 {
 
         public paragonScreen() {
             InitializeComponent();
+
             l1.Hide();
             textBox1.Text = "100";
             textBox2.Text = "2500";
