@@ -47,10 +47,10 @@ namespace ZombieWorld3 {
                 if (line.Contains("builderkills") && line.Contains("Key name")) {
                     Methods.lineChanger("                  <Value int=\"" + textBox7.Text + "\"/>",filePath,y + 1);
                 }
-                Main.WriteStuff2(rTB);
                 if (line.Contains("Signature value")) {
                     BankSign.Sign(HandleOwner,Main.playerHandle,"zombieworldu",filePath);
                     Methods.lineChanger("    <Signature value=\"" + BankSign.signString + "\"/>",filePath,y);
+                    Main.WriteStuff2(rTB);
                 }
             }
         }
