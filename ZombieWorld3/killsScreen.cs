@@ -8,16 +8,17 @@ namespace ZombieWorld3 {
 
         public killsScreen() {
             InitializeComponent();
-            textBox1.Text = "9999999";
-            textBox2.Text = "9999999";
-            textBox3.Text = "9999999";
-            textBox4.Text = "9999999";
-            textBox5.Text = "9999999";
-            textBox6.Text = "9999999";
-            textBox7.Text = "9999999";
+            textBox1.Text = "9999999"; textBox2.Text = "9999999"; textBox3.Text = "9999999"; textBox4.Text = "9999999";
+            textBox5.Text = "9999999"; textBox6.Text = "9999999"; textBox7.Text = "9999999";
         }
 
         public string filePath = string.Empty;
+
+        public void SubRoutine(string name,string fieldname,string line,int y) {
+            if (line.Contains(name) && line.Contains("Key name")) {
+                Methods.lineChanger("                  <Value int=\"" + fieldname + "\"/>",filePath,y + 1);
+            }
+        }
 
         public void WriteBank(string BankFile,string HandleOwner) {
             Main.WriteStuff(rTB);
@@ -26,27 +27,13 @@ namespace ZombieWorld3 {
             string[] array = File.ReadAllLines(filePath);
             for (int y = 0;y < array.Length;y++) {
                 string line = array[y];
-                if (line.Contains("specialistkills") && line.Contains("Key name")) {
-                    Methods.lineChanger("                  <Value int=\"" + textBox1.Text + "\"/>",filePath,y + 1);
-                }
-                if (line.Contains("singletargetkills") && line.Contains("Key name")) {
-                    Methods.lineChanger("                  <Value int=\"" + textBox2.Text + "\"/>",filePath,y + 1);
-                }
-                if (line.Contains("assassinkills") && line.Contains("Key name")) {
-                    Methods.lineChanger("                  <Value int=\"" + textBox3.Text + "\"/>",filePath,y + 1);
-                }
-                if (line.Contains("supportkills") && line.Contains("Key name")) {
-                    Methods.lineChanger("                  <Value int=\"" + textBox4.Text + "\"/>",filePath,y + 1);
-                }
-                if (line.Contains("splashkills") && line.Contains("Key name")) {
-                    Methods.lineChanger("                  <Value int=\"" + textBox5.Text + "\"/>",filePath,y + 1);
-                }
-                if (line.Contains("tankkills") && line.Contains("Key name")) {
-                    Methods.lineChanger("                  <Value int=\"" + textBox6.Text + "\"/>",filePath,y + 1);
-                }
-                if (line.Contains("builderkills") && line.Contains("Key name")) {
-                    Methods.lineChanger("                  <Value int=\"" + textBox7.Text + "\"/>",filePath,y + 1);
-                }
+                SubRoutine("specialistkills",textBox1.Text,line,y);
+                SubRoutine("singletargetkills",textBox2.Text,line,y);
+                SubRoutine("assassinkills",textBox3.Text,line,y);
+                SubRoutine("supportkills",textBox4.Text,line,y);
+                SubRoutine("splashkills",textBox5.Text,line,y);
+                SubRoutine("tankkills",textBox6.Text,line,y);
+                SubRoutine("builderkills",textBox7.Text,line,y);
                 if (line.Contains("Signature value")) {
                     BankSign.Sign(HandleOwner,Main.playerHandle,"zombieworldu",filePath);
                     Methods.lineChanger("    <Signature value=\"" + BankSign.signString + "\"/>",filePath,y);
