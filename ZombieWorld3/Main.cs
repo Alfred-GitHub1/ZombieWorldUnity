@@ -123,11 +123,11 @@ namespace ZombieWorld3 {
         }
 
         public void hideAllandShow(Control s) {
-            s.Show();
             homeScreen1.Hide();
             killsScore1.Hide();
             killsScreen1.Hide();
             challengesScreen1.Hide();
+            s.Show();
         }
 
         private void button7_Click(object sender,EventArgs e) {

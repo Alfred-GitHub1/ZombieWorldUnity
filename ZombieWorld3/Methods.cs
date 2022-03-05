@@ -35,7 +35,11 @@ namespace ZombieWorld3 {
                 int endDeleteLine = 0;
                 bool found = false;
                 for (int y = 0;y < read.Count;y++) {
-                    string line = read[y];
+                    if (read[y].Contains("<Section name=") && read[y].Contains("Hack_This_I_Dare_You")) {
+                        read.RemoveRange(y,5);
+                    }
+                }
+                for (int y = 0;y < read.Count;y++) {
                     if (read[y].Contains("<Section name=") && read[y].Contains("Challenges")) {
                         startDeleteLine = y + 1;
                         found = true;

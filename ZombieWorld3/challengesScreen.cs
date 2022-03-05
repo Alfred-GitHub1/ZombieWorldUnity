@@ -12,11 +12,15 @@ namespace ZombieWorld3 {
 
         public string filePath = string.Empty;
 
-        public void InsertStuff() {
+        public void InsertStuff() { 
+            Methods.InsertLine(filePath,@"    </Section>",2);
+            Methods.InsertLine(filePath,@"       </Key>",2);
+            Methods.InsertLine(filePath,@"            <Value flag=""1"" />",2);
+            Methods.InsertLine(filePath,@"        <Key name=""ChangeAnythingAndYourStatsReset"">",2);
+            Methods.InsertLine(filePath,@"    <Section name=""Hack_This_I_Dare_You"">",2);
             Methods.InsertLine(filePath,@"    </Section>",2);
             EditBank(@"""CLShieldProblems""");
             EditBank(@"""CLTorture1""");
-            EditBank(@"""CLInfantry""");
             EditBank(@"""CLEvasive""");
             EditBank(@"""CLConstructor""");
             EditBank(@"""CLWarpspeed""");
